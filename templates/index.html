@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/foto.ico">
+    <title>Mortality Risk Prediction</title>
+</head>
+<body>
+   
+    <div class="container">
+        <!-- code here -->
+        <div class="card">
+            <div class="card-image">	
+                <h2 class="card-heading">
+                    Mortality Risk Prediction<br>CoVID-19
+                </h2>
+            </div>
+            
+            <form class="card-form" action="{{ url_for('predict')}}" method="POST">
+                <div class="input">
+                    <input name="Usia" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Usia</label>
+                </div>
+                            <div class="input">
+                    <input name="BMI" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">BMI</label>
+                </div>
+                            <div class="input">
+                    <input name="Keparahan Infeksi " type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Keparahan Infeksi (1 - 4)</label>
+                </div>
+                <div class="input">
+                    <input name="Leukosit" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Leukosit</label>
+                </div>
+                <div class="input">
+                    <input name="NLR" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">NLR</label>
+                </div>
+                <div class="input">
+                    <input name="PT" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">PT</label>
+                </div>
+                <div class="input">
+                    <input name="Fibrinogen" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Fibrinogen</label>
+                </div>
+                <div class="input">
+                    <input name="D-dimer" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">D-Dimer</label>
+                </div>
+                <div class="input">
+                    <input name="SGOT" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">SGOT</label>
+                </div>
+                <div class="input">
+                    <input name="LDH" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">LDH</label>
+                </div>
+                <div class="input">
+                    <input name="CRP" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">CRP</label>
+                </div>
+                <div class="input">
+                    <input name="Procalcitonin" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Procalcitonin</label>
+                </div>
+                <div class="input">
+                    <input name="MCP-1" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">MCP-1</label>
+                </div>
+                <div class="input">
+                    <input name="IL1B" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">IL1B</label>
+                </div>
+                <div class="input">
+                    <input name="TNF α" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">TNF α</label>
+                </div>
+                <div class="input">
+                    <input name="IP-10" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">IP-10</label>
+                </div>
+                <div class="input">
+                    <input name="IL-4" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">IL-4</label>
+                </div>
+                <div class="input">
+                    <input name="IL-6" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">IL-6</label>
+                </div>
+                <div class="input">
+                    <input name="DM" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">DM (0 = tidak atau 1 = ya)</label>
+                </div>
+
+                <div class="action">
+                    <button type="submit" class="action-button">Submit</button>
+                </div>
+            </form>
+
+            <!-- <div id="uiEstimatedPrice" class="result">
+            <br>
+            <blink>{{prediction_text}}</blink>
+            </div> -->
+
+            <center><p style="color: darkred; font-weight: bold;">{{ prediction }}</p></center>
+        </div>
+    </div>
+    
+</body>
+</html>
