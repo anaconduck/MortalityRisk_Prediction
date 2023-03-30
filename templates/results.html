@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../static/results.css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/foto.ico">
+    <title>Mortality Risk Prediction</title>
+</head>
+
+<body class="u-body">
+    <section class="u-clearfix u-section-1" id="sec-2afe">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            {% if pred == 1 %}
+            <img class="u-align-center u-image u-image-default u-image-1" src="../static/images/virus.jpg" alt=""
+                data-image-width="1280" data-image-height="853">
+            <blink><h3 class="u-align-center u-text u-text-1"> ICU </h3></blink>
+            <a href="https://covid19-deployment-production.up.railway.app/">back</a>
+            {% elif pred == 0 %}
+            <img class="u-align-center u-image u-image-default u-image-1" src="../static/images/sun.jpg" alt=""
+                data-image-width="1280" data-image-height="853">
+            <blink1><h3 class="u-align-center u-text u-text-1"> SEHAT </h3></blink1>
+            <a href="https://covid19-deployment-production.up.railway.app/">back</a>
+            {% endif %}
+        </div>
+    </section>
+    <style class="u-overlap-style">
+        .u-overlap:not(.u-sticky-scroll) .u-header {}
+    </style>
+</body>
+
+</html>
